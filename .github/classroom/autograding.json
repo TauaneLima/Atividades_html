@@ -1,0 +1,254 @@
+{
+  "tests": [
+    {
+      "name": "contato.html tem sintaxe html correta",
+      "setup": "npm install html-validate --silent > out",
+      "run": "node node_modules/html-validate/bin/html-validate.js contato.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "entrar.html tem sintaxe html correta",
+      "setup": "npm install html-validate --silent > out",
+      "run": "node node_modules/html-validate/bin/html-validate.js entrar.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "esqueci.html tem sintaxe html correta",
+      "setup": "npm install html-validate --silent > out",
+      "run": "node node_modules/html-validate/bin/html-validate.js esqueci.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "inscrever.html tem sintaxe html correta",
+      "setup": "npm install html-validate --silent > out",
+      "run": "node node_modules/html-validate/bin/html-validate.js inscrever.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "recuperar.html tem sintaxe html correta",
+      "setup": "npm install html-validate --silent > out",
+      "run": "node node_modules/html-validate/bin/html-validate.js recuperar.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "[contato.html] Campo com name nome-completo é do tipo text, tem comprimento máximo 120 e é obrigatório",
+      "setup": "",
+      "run": "grep -Piq \"(?=.*?nome-completo)(?=.*?required)(?=.*?type.*text)(?=.*?maxlength.*120).*\" contato.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "[contato.html] campo com name email é do tipo \"email\" e é obrigatório",
+      "setup": "",
+      "run": "grep -Piq \"(?=.*?email)(?=.*?required)(?=.*?type.*email).*\" contato.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "[contato.html] campo com name assunto é um select box e é obrigatório",
+      "setup": "",
+      "run": "grep -Piq \"(?=.*?required)(?=.*?assunto)(?=.*?select).*\" contato.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "[contato.html] Campo com name mensagem é obrigatório, tem comprimento máximo 500 e é um textarea",
+      "setup": "",
+      "run": "grep -Piq \"(?=.*?maxlength.*500)(?=.*?required)(?=.*?mensagem)(?=.*?textarea).*\" contato.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "[contato.html] Campo com name conheceu é um select box",
+      "setup": "",
+      "run": "grep -Piq \"(?=.*?select)(?=.*?conheceu).*\" contato.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "[contato.html] Há um button associado ao form contato",
+      "setup": "",
+      "run": "grep -Piq \"(?=.*?button)(?=.*?form.*contato).*\" contato.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "[contato.html] O form contato tem action agradecimento.html",
+      "setup": "",
+      "run": "grep -Piq \"(?=.*?form)(?=.*?id.*contato)(?=.*?action.*agradecimento.html).*\" contato.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "[entrar.html] O form entrar tem action index.html",
+      "setup": "",
+      "run": "grep -Piq \"(?=.*?form)(?=.*?id.*entrar)(?=.*?action.*index.html).*\" entrar.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "[entrar.html] Há um button associado ao form entrar",
+      "setup": "",
+      "run": "grep -Piq \"(?=.*?button)(?=.*?form.*entrar)(?=.*?type.*submit).*\" entrar.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "[entrar.html] Campo com name usuario tem comprimento máximo 50 e é obrigatório",
+      "setup": "",
+      "run": "grep -Piq \"(?=.*?required)(?=.*?usuario)(?=.*?type.*text)(?=.*?maxlength.*50).*\" entrar.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "[entrar.html] Campo com name senha tem comprimento máximo 15, é obrigatório e é do tipo password",
+      "setup": "",
+      "run": "grep -Piq \"(?=.*?required)(?=.*?senha)(?=.*?type.*password)(?=.*?maxlength.*15).*\" entrar.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "[entrar.html] Campo com name lembrar é um checkbox",
+      "setup": "",
+      "run": "grep -Piq \"(?=.*?lembrar)(?=.*?type.*checkbox).*\" entrar.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "[inscrever.html] Campo com name usuário é obrigatório e tem comprimento máximo 50",
+      "setup": "",
+      "run": "grep -Piq \"(?=.*?required)(?=.*?usuario)(?=.*?type.*text)(?=.*?maxlength.*50).*\" inscrever.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "[inscrever.html] Campo com name nome é obrigatório e tem comprimento máximo 120",
+      "setup": "",
+      "run": "grep -Piq \"(?=.*?required)(?=.*?nome)(?=.*?type.*text)(?=.*?maxlength.*120).*\" inscrever.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "[inscrever.html] Campo com name email é obrigatório e tem tipo \"email\"",
+      "setup": "",
+      "run": "grep -Piq \"(?=.*?required)(?=.*?email)(?=.*?type.*email).*\" inscrever.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "[inscrever.html] Campo com name celular é do tipo \"text\"",
+      "setup": "",
+      "run": "grep -Piq \"(?=.*?celular)(?=.*?type.*text).*\" inscrever.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "[inscrever.html] O form inscrever tem action index.html",
+      "setup": "",
+      "run": "grep -Piq \"(?=.*?form)(?=.*?id.*inscrever)(?=.*?action.*index.html).*\" inscrever.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "[inscrever.html] Há um button associado ao form inscrever",
+      "setup": "",
+      "run": "grep -Piq \"(?=.*?button)(?=.*?type.*submit)(?=.*?form.*inscrever).*\" inscrever.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "[recuperar.html] O form recuperar tem action index.html",
+      "setup": "",
+      "run": "grep -Piq \"(?=.*?form)(?=.*?id.*recuperar)(?=.*?action.*index.html).*\" recuperar.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "[recuperar.html] Há um button associado ao form recuperar",
+      "setup": "",
+      "run": "grep -Piq \"(?=.*?button)(?=.*?type.*submit)(?=.*?form.*recuperar).*\" recuperar.html",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
