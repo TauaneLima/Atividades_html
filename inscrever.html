@@ -47,20 +47,39 @@
             </nav>
         </header>
         <main>
-            <h1>Vire nosso aluno!</h1>
-            <p>
-                Aqui constará o formulário de inscrição da faculdade. 
-                Esse formulário deve capturar os seguintes campos:
-            </p>
-            <ul>
-                <li><strong>usuario</strong>: Criação de um usuário único, no máximo 50 caracteres, obrigatório.</li>
-                <li><strong>nome</strong>: Campo de texto simples, máximo 120 caracteres, obrigatório.</li>
-                <li><strong>email</strong>: Campo de e-mail válido, obrigatório.</li>
-                <li><strong>celular</strong>: Campo de texto simples, opcional.</li>
-            </ul>
-            <p>
-                Ao inscrever, deve encaminhar para a <a href="index.html">home</a>.
-            </p>
+        <h1>Vire nosso aluno!</h1>
+            
+            <form id="inscrever" action="index.html">
+
+                <p>
+                    <label for="usuario">Usuário:</label>  
+                    <input id="usuario" type="text" name="usuario" maxlength="50" required>
+                </p>
+
+                <p>
+                    <label for="nome">Nome:</label>
+                    <input id="nome" type="text" name="nome" maxlength="120" required>
+                </p>
+
+                <p>
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="celular">Celular:</label>
+                    <input id="celular" type="text" name="celular">
+                </p>
+                
+                <p>
+                    <button type="submit" form="inscrever">Inscreva-se</button>
+                </p>
+                
+                
+
+
+        </form>
+
 
         </main>
         <footer>
