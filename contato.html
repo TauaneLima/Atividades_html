@@ -48,34 +48,45 @@
         </header>
         <main>
             <h1>Entre em Contato!</h1>
+
+            <form id="formuláriodecontato">
             <p>
-                Aqui constará o formulário de contato. Esse formulário deve possuir os seguintes campos:
+             <label for= "nome-completo">Nome Completo:</label>
+             <input id= "nome-completo" type= "text" name= "nome-completo" maxlength="120" required>
             </p>
+
+            <p>
+                <label for="email">Email:</label>
+                <input id="email" type="email" name="email" required>
+            </p>
+
+            <br>
+            <label for= "assunto">Assunto:</label>
+            <select name="assunto" id="assunto" required>
+              <option value="">Escolha uma opção</option>
+              <option value="B">Bug</option>
+              <option value="R">Reclamação</option>
+              <option value="S">Sugestão</option>
+            </select>
+            <br>
+            <br>
+            <label for= "mensagem">Mensagem:</label>
+            <textarea name= "mensagem" id="mensagem"  cols="30" rows="10" maxlength="500" required></textarea>
+            <br>
             <ul>
-                <li><strong>nome-completo</strong>: deve capturar um texto de única linha de até 120 caracteres, obrigatório.</li>
-                <li><strong>email</strong>: deve capturar um e-mail válido, obrigatório.</li>
-                <li>
-                    <strong>assunto</strong>: deve escolher um assunto de uma caixa de seleção, obrigatório. As opções são:
-                    <ul>
-                        <li><em>Bug (B)</em></li>
-                        <li><em>Reclamação (R)</em></li>
-                        <li><em>Sugestão (S)</em></li>
-                    </ul>
-                </li>
-                <li><strong>mensagem</strong>: deve capturar uma mensagem de várias linhas de até 500 caracteres, obrigatório.</li>
-                <li>
-                    <strong>conheceu</strong>: deve capturar uma única opção de como conheceu a impacta de uma lista de opções, opcional. Os valores são:
-                    <ul>
-                        <li><em>Google (G)</em></li>
-                        <li><em>Indicação (I)</em></li>
-                        <li><em>Propaganda (P)</em></li>
-                        <li><em>Outros (O)</em></li>
-                    </ul>
-                </li>
+
+            Como conheceu a Impacta: <br/>
+
+            <input type="radio" value="G" name="conheceu"/>Google<br/>
+            <input type="radio" value="I" name="Indicaçao"/>Indicação<br/>
+            <input type="radio" value="P" name="Propaganda">Propaganda<br/>
+            <input type="radio" value="O" name="Outro">Outros<br/> 
             </ul>
-            <p>
-                Ao enviar a mensagem, deve redirecionar a página para a <a href="agradecimento.html">página de agradecimento</a>.
-            </p>
+
+           <a  href="agradecimento.html"><button type="submit" form="formulariodecontato">Enviar</button></a>
+            
+            </form>
+           
         </main>
         <footer>
             <ul>
