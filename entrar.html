@@ -47,21 +47,36 @@
             </nav>
         </header>
         <main>
-            <h1>Entrar</h1>
+        <h1>Entrar</h1>
             <p>
-                Aqui deve constar o formulário de login do sistema. Ele deve conter os seguintes campos:
+                <form id="form2" action= "index.html">
+                    <p>
+                        <label for="usuario">Usuário:</label>
+                        <input id="usuario" type="text" name="usuario" maxlength="50" required>
+                    </p>
+
+                    <p>
+                        <label for="senha">Senha:</label>
+                        <input id="senha" type="password" name="senha" maxlength="15" required>
+                    </p>
+
+                    <p>
+                        <label for="lembrar">Lembrar</label>
+                        <input id="lembrar" type="checkbox" name="lembrar" value="l">
+                    </p>
+
+                    <p>
+                        <a href="esqueci.html">Esqueci a senha</a>
+                    </p>
+
+                    <p>
+                        <button type="submit" form="form2">Entrar</button>
+                    </p>
+
+
+               </form>
             </p>
-            <ul>
-                <li><strong>usuario</strong>: caixa de texto simples, no máximo 50 caracteres, obrigatório.</li>
-                <li><strong>senha</strong>: caixa de senha, no máximo 15 caracteres, obrigatório.</li>
-                <li><strong>lembrar</strong>: caixa de seleção desmarcável para manter o login do usuário.</li>
-            </ul>    
-            <p>
-                Além disso deve existir um link que leve para a página de <a href="esqueci.html">esqueci a senha</a>.
-            </p>
-            <p>
-                Ao enviar os dados, deve redirecionar para a <a href="index.html">home</a>.
-            </p>
+    
         </main>
         <footer>
             <ul>
